@@ -1,3 +1,3 @@
 def encrypt(message, shift)
-    alphabet = ('a'..'z')
+    alphabet = ('a'..'z').to_a
 end
