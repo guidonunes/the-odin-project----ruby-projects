@@ -12,7 +12,7 @@ def caesar_cipher(message, shift)
             new_index = (index + shift) % 26
             encrypted_message += alphabet[new_index]
         else
-# non alphabetic characters are left
+# non alphabetic characters are left unchanged
             encrypted_message += char
         end
     end
