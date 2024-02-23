@@ -6,6 +6,8 @@ def caesar_cipher(message, shift)
     lowercase_message = message.downcase
 # iterate through each character in the lowercase message
     lowercase_message.each_char do |char|
+        if char.match?(/[a-z]/)
+           
 
     end
 end
