@@ -1,6 +1,6 @@
 def caesar_cipher(message, shift)
     alphabet = ('a'..'z').to_a
-    encrypted_message = ""
+    encrypted_message = ''
 
 # convert message to lowercase
     lowercase_message = message.downcase
@@ -21,5 +21,5 @@ def caesar_cipher(message, shift)
 end
 
 
-puts caesar_cipher("What a string!", 5)
+puts caesar_cipher('What a string!', 5)
 
