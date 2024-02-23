@@ -4,6 +4,10 @@ def caesar_cipher(message, shift)
 
 # convert message to lowercase
     lowercase_message = message.downcase
+# iterate through each character in the lowercase message
+    lowercase_message.each_char do |char|
+
+    end
 end
 
 
