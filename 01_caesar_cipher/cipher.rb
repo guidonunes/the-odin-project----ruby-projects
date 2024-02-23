@@ -8,6 +8,8 @@ def caesar_cipher(message, shift)
     lowercase_message.each_char do |char|
         if char.match?(/[a-z]/)
         index = alphabet.index(char)
+# caesar cipher shifting logic
+        new_index = (index + shift) % 26
 
     end
 end
