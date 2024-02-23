@@ -21,18 +21,5 @@ def caesar_cipher(message, shift)
 end
 
 
-
-
-
-
-
-
-
-
-
-#Steps
-
-#1. Convert the message to lowercase
-#2. Initialize empty string to store encrypted message
-#3. Iterate through each character in the lowercase message
+puts caesar_cipher("What a string!", 5)
 
