@@ -14,9 +14,11 @@ def caesar_cipher(message, shift)
         else
 # non alphabetic characters are left
             encrypted_message += char
+        end
     end
-end
 
+    return encrypted_message
+end
 
 
 
