@@ -4,6 +4,7 @@ def substring(word, dictionary)
     word = word.downcase
 
     dictionary.each do |substring|
+        if word.include?(substring.downcase)
 end
 
 
