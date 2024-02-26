@@ -5,6 +5,8 @@ def substring(word, dictionary)
 
     dictionary.each do |substring|
         if word.include?(substring.downcase)
+            substrings_count[substring.downcase] += 1
+    end
 end
 
 
