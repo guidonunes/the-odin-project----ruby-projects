@@ -1,4 +1,6 @@
-def substring(word, dictionary)
+dictionary = ["below","down","go","going","horn","how","howdy","it","i","low","own","part","partner","sit"]
+
+def substrings(word, dictionary)
     # create an empty hash to store the count of substrings
     substrings_count = Hash.new(0)
     word = word.downcase
@@ -13,5 +15,4 @@ substrings_count
 
 end
 
-
-dictionary = ["below","down","go","going","horn","how","howdy","it","i","low","own","part","partner","sit"]
+substrings("Howdy partner, sit down! How's it going?", dictionary)
