@@ -1,4 +1,4 @@
-def substring()
+def substring(string, dictionary)
 
 end
 
