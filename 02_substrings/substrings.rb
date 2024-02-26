@@ -7,7 +7,8 @@ def substrings(word, dictionary)
 
     dictionary.each do |substring|
         if word.include?(substring.downcase)
-            substrings_count[substring.downcase] += 1
+    # count the ocurrences of the substring in the word 
+            substrings_count[substring.downcase] += word.scan(substring.downcase).length
     end
 end
 
@@ -15,4 +16,4 @@ substrings_count
 
 end
 
-substrings("Howdy partner, sit down! How's it going?", dictionary)
+puts substrings("Howdy partner, sit down! How's it going?", dictionary)
