@@ -10,7 +10,7 @@ def stock_picker(arr)
         
             #Update best day to buy, best day to sell, and max profit if the
             if current_profit > max_profit
-              
+                best_day_buy = buy_day
             end     
         end
     end
