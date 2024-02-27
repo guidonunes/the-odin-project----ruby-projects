@@ -6,7 +6,6 @@ def stock_picker(arr)
     arr.each_index do |buy_day|
         #start the iteration from the day after the current buy_day
         (buy_day + 1...arr.length).each do |sell_day|
-            current_profit = arr[sell_day] - arr[buy_day]
     end
 end
 
