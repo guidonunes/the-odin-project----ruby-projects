@@ -6,7 +6,6 @@ In cryptography, a Caesar cipher, also known as Caesar’s cipher, the shift cip
 
 ## My solution
 
-```
 * Create an array containing all the lowercase letters of the alphabet; 
 * Initialize an empty string to store the encrypted message;
 * Convert the message to lowercase (not destructively);
@@ -14,5 +13,4 @@ In cryptography, a Caesar cipher, also known as Caesar’s cipher, the shift cip
 * Find the index of the character in the alphabet;
 * Apply the Caesar Cipher shifting logic and append the shifted character to the encrypted message
 
-```
 
