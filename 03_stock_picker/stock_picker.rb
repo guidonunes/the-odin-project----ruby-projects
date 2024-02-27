@@ -16,6 +16,7 @@ def stock_picker(arr)
             end     
         end
     end
+    [best_day_buy, best_day_sell]
 end
 
 
