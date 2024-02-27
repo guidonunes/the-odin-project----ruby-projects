@@ -1,5 +1,5 @@
 def stock_picker(arr)
-
+    best_day_buy = 0
 end
 
 
