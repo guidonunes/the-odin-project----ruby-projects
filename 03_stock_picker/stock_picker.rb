@@ -8,10 +8,11 @@ def stock_picker(arr)
         (buy_day + 1...arr.length).each do |sell_day|
             current_profit = arr[sell_day] - arr[buy_day]
         
-            #Update best day to buy, best day to sell, and max profit if the
+            #Update best day to buy, best day to sell, and max profit if the current profit is greater
             if current_profit > max_profit
                 best_day_buy = buy_day
                 best_day_sell = sell_day
+                max_profit = current_profit
             end     
         end
     end
