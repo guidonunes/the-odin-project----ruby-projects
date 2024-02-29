@@ -4,7 +4,9 @@ def bubble_sort(arr)
 
     loop do 
         swapped = false
-    
+        (0...arr_length - 1).each do|i|
+
+        end
     end
 end
 
