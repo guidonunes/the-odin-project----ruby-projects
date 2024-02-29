@@ -3,6 +3,7 @@ def bubble_sort(arr)
     return arr if arr_length <= 1 #already sorted 
 
     loop do 
+        swapped = false
     
     end
 end
