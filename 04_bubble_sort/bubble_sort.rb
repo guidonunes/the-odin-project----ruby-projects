@@ -1,6 +1,5 @@
 def bubble_sort(arr)
-    arr_length = arr.size
-    
+    return arr if arr.size <= 1 # already sorted 
 end
 
 
