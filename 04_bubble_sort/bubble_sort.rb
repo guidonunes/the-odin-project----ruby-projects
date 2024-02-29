@@ -15,7 +15,10 @@ def bubble_sort(arr)
         end
         break if not swapped
     end
+    #return the sorted arr
     arr
 end
 
 
+a = [6, 3, 5, 2, 1, 4]
+p bubble_sort(a)
