@@ -3,10 +3,11 @@ def bubble_sort(arr)
     return arr if arr_length <= 1 #already sorted 
 
     loop do 
-        swapped = false
+        swapped = false #track if any swaps were made in the pass
         (0...arr_length - 1).each do|i|
             if arr[i] > arr[i + 1]
                 arr[i], arr[i+1] = arr[i+1], arr[i] #swap elements
+                swapped = true #set to true since a swap occurred
             end
         end
     end
