@@ -5,7 +5,9 @@ def bubble_sort(arr)
     loop do 
         swapped = false
         (0...arr_length - 1).each do|i|
-
+            if arr[i] > arr[i + 1]
+                arr[i], arr[i+1] = arr[i+1], arr[i] #swap elements
+            end
         end
     end
 end
