@@ -7,5 +7,7 @@ class Board
 
   def print_board
     puts '-------------'
+    @board.each do |row|
+        
   end
 end
