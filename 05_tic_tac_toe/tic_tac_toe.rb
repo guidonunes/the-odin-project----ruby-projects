@@ -6,8 +6,13 @@ class Board
   end
 
   def print_board
-    puts '-------------'
+    puts "-------------"
     @board.each do |row|
-        
+      print "|"
+      row.each do |col|
+        print " #{col} |"
+      end
+      puts "\n-------------"
+    end
   end
 end
