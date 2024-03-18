@@ -28,16 +28,17 @@ class Game
     end
   end
   
-  def make_move(spot)
+  def make_move(move)
     symbol = current_player == 1 ? 'X' : '0'
-    row, col = spot_to_index(spot)
+    row, col = move_to_index(move)
   end
 
   private
 
-  def spot_to_index(spot)
-    row = (spot -1) / 3
-    col = (spot -1) % 3
+  def move_to_index(move)
+  # move numbers are 1-base, whereas the array index in 0-based  
+    row = (move -1) / 3
+    col = (move -1) % 3
     [row, col]
   end
 
