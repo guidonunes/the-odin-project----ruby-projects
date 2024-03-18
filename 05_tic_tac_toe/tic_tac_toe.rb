@@ -59,6 +59,8 @@ class Game
 end
 
 #example usage cases:
-board = Game.new
+board = Game.new(player1_name, player2_name)
 board.draw_board
 board.make_move
+board.switch_player
+board.play_to_index
