@@ -14,7 +14,7 @@ puts "Let's start the game! #{player1_name} vs #{player2_name}"
 class Game
   attr_accessor :board, :current_player, :player1_name, :player2_name
   
-  def initialize
+  def initialize(player1_name, player2_name)
     @board = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
     @current_player = 1
     @player1_name = player1_name
