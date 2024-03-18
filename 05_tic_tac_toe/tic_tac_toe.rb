@@ -13,3 +13,7 @@ class Board
     end
   end
 end
+
+#example usage cases:
+board = Board.new
+board.print_board
