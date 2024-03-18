@@ -1,3 +1,6 @@
+puts "Welcome to Tic Tac Toe! The rules are the same old ones. Have fun!"
+
+#create board
 class Board
   attr_accessor :board
   
