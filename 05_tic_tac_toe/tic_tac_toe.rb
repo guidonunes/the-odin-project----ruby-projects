@@ -41,7 +41,9 @@ class Game
     [row, col]
   end
 
-  
+  def switch_player
+    
+  end
 end
 
 #example usage cases:
