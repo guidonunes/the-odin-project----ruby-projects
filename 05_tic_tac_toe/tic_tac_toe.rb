@@ -36,7 +36,9 @@ class Game
   private
 
   def spot_to_index(spot)
-    
+    row = (spot -1) / 3
+    col = (spot -1) % 3
+    [row, col]
   end
 
   
