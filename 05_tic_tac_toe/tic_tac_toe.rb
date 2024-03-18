@@ -8,11 +8,8 @@ class Board
   def print_board
     puts "-------------"
     @board.each do |row|
-      print "|"
-      row.each do |col|
-        print " #{col} |"
-      end
-      puts "\n-------------"
+      puts "| #{row.join(' | ')} |"
+      puts "-------------"
     end
   end
 end
