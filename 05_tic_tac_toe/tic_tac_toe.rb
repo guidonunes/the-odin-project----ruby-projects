@@ -1,7 +1,11 @@
+#game intro
 puts "Welcome to Tic Tac Toe! The rules are the same old ones. Have fun!"
 
 print "Enter Player 1's name: "
 player1_name = gets.chomp
+
+print "Enter Player 2's name: "
+player2_name = gets.chomp
 
 #create board
 class Board
