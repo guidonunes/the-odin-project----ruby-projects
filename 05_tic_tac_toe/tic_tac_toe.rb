@@ -28,7 +28,7 @@ class Board
     end
   end
   
-  def make_move(spot, number)
+  def make_move(spot)
    
   end
 
