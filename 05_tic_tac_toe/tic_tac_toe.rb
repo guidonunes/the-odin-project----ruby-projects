@@ -11,13 +11,14 @@ puts "#{player2_name} is O"
 
 puts "Let's start the game! #{player1_name} vs #{player2_name}"
 
-#create board
 class Game
   attr_accessor :board, :current_player, :player1_name, :player2_name
   
   def initialize
     @board = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
     @current_player = 1
+    @player1_name = player1_name
+    @player2_name = player2_name
   end
   
   def draw_board
