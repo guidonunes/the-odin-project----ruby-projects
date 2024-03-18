@@ -12,7 +12,7 @@ puts "#{player2_name} is O"
 puts "Let's start the game! #{player1_name} vs #{player2_name}"
 
 #create board
-class Board
+class Game
   attr_accessor :board, :current_player
   
   def initialize
@@ -30,12 +30,18 @@ class Board
   
   def make_move(spot)
     symbol = current_player == 1 ? 'X' : '0'
+    row, col = spot_to_index(spot)
   end
 
+  private
+
+  def spot_to_index(spot)
+    
+  end
 
   
 end
 
 #example usage cases:
-board = Board.new
-board.print_board
+board = Game.new
+board.draw_board
