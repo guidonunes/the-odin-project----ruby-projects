@@ -31,12 +31,19 @@ class Game
   def make_move(move)
     symbol = current_player == 1 ? 'X' : '0'
     row, col = play_to_index(move)
+
+    if row and col and @board[row][col].is_a?(Integer)
+      @board[row][col] = symbol
+      switch_player
+    else
+      puts 'Ouch! Invalid move. Please select an unoccupied spot (1-9)'
+    end
   end
 
   private
 
   def play_to_index(move)
-  # move numbers are 1-base, whereas the array index in 0-based  
+  # move numbers are 1-based, whereas the array index is 0-based  
     row = (move -1) / 3
     col = (move -1) % 3
     [row, col]
