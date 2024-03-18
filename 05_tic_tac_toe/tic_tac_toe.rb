@@ -20,7 +20,7 @@ class Board
     @current_player = 1
   end
   
-  def print_board
+  def draw_board
     puts "-------------"
     @board.each do |row|
       puts "| #{row.join(' | ')} |"
@@ -29,7 +29,7 @@ class Board
   end
   
   def make_move(spot)
-   
+    symbol = current_player == 1 ? 'X' : '0'
   end
 
 
