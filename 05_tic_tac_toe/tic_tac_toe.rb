@@ -13,13 +13,12 @@ puts "Let's start the game! #{player1_name} vs #{player2_name}"
 
 #create board
 class Board
-  
   attr_accessor :board
   
   def initialize
     @board = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
   end
-
+  
   def print_board
     puts "-------------"
     @board.each do |row|
@@ -27,8 +26,13 @@ class Board
       puts "-------------"
     end
   end
+  
+  def make_move(spot, number)
+  
+  end
 
 
+  
 end
 
 #example usage cases:
