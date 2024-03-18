@@ -30,6 +30,7 @@ class Game
   
   def make_move(move)
     symbol = current_player == 1 ? 'X' : '0'
+    print "#{current_player == 1 ? player1_name : player2_name}, pick a spot (1-9): "
     row, col = play_to_index(move)
 
     if row and col and @board[row][col].is_a?(Integer)
