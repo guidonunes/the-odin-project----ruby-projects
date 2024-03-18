@@ -13,10 +13,11 @@ puts "Let's start the game! #{player1_name} vs #{player2_name}"
 
 #create board
 class Board
-  attr_accessor :board
+  attr_accessor :board, :current_player
   
   def initialize
     @board = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+    @current_player = 1
   end
   
   def print_board
@@ -28,7 +29,7 @@ class Board
   end
   
   def make_move(spot, number)
-  
+   
   end
 
 
