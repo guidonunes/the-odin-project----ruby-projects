@@ -30,12 +30,12 @@ class Game
   
   def make_move(move)
     symbol = current_player == 1 ? 'X' : '0'
-    row, col = move_to_index(move)
+    row, col = play_to_index(move)
   end
 
   private
 
-  def move_to_index(move)
+  def play_to_index(move)
   # move numbers are 1-base, whereas the array index in 0-based  
     row = (move -1) / 3
     col = (move -1) % 3
