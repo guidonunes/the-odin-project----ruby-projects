@@ -7,6 +7,8 @@ player1_name = gets.chomp
 print "Enter Player 2's name: "
 player2_name = gets.chomp
 
+puts "Let's start the game! #{player1_name} vs #{player2_name}"
+
 #create board
 class Board
   attr_accessor :board
