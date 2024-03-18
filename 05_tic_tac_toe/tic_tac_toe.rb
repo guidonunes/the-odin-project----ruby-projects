@@ -28,9 +28,11 @@ class Game
     end
   end
   
-  def make_move(move)
+  def make_move
     symbol = current_player == 1 ? 'X' : '0'
     print "#{current_player == 1 ? player1_name : player2_name}, pick a spot (1-9): "
+    move = gets.chomp.to_i
+    
     row, col = play_to_index(move)
 
     if row and col and @board[row][col].is_a?(Integer)
@@ -58,3 +60,4 @@ end
 #example usage cases:
 board = Game.new
 board.draw_board
+board.make_move
