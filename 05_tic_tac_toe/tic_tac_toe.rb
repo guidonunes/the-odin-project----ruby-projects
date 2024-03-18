@@ -3,14 +3,17 @@ puts "Welcome to Tic Tac Toe! The rules are the same old ones. Have fun!"
 
 print "Enter Player 1's name: "
 player1_name = gets.chomp
+puts "#{player1_name} is X"
 
 print "Enter Player 2's name: "
 player2_name = gets.chomp
+puts "#{player2_name} is O"
 
 puts "Let's start the game! #{player1_name} vs #{player2_name}"
 
 #create board
 class Board
+  
   attr_accessor :board
   
   def initialize
@@ -24,6 +27,8 @@ class Board
       puts "-------------"
     end
   end
+
+
 end
 
 #example usage cases:
