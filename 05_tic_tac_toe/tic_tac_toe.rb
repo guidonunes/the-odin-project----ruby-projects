@@ -42,7 +42,7 @@ class Game
   end
 
   def switch_player
-    
+    @current_player = @current_player == 1 ? 2 : 1
   end
 end
 
