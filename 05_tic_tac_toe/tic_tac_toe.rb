@@ -63,7 +63,8 @@ class Game
     symbols.each do |symbol|
     # check rows
     @board.each do |row|      
-      return true if row.all? { |spot| spot == symbol}
+      return player1_name if row.all? { |spot| spot == symbol}
+      return player2_name if row.all? { |spot| spot == symbol}
     end
     # check columns
     @board.transpose.each do |col|
