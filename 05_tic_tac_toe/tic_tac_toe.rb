@@ -58,7 +58,7 @@ class Game
   end
 
   def check_winner(player1_name, player2_name)
-    
+    symbols = ['X', 'O']
   
   end
 end
