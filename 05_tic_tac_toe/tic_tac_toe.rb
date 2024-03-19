@@ -47,7 +47,7 @@ class Game
   private
 
   def play_to_index(move)
-  # the move numbers are 1-based, whereas the array index is 0-based  
+  # it's (move -1) because move numbers are 1-based, whereas the array index is 0-based  
     row = (move -1) / 3
     col = (move -1) % 3
     [row, col]
@@ -72,15 +72,17 @@ class Game
       return player2_name if col.all? {|spot| spot == symbol}
     end
     # check diagonals
-    diagonal1 = [@board[0][0], @board[1][1], @board[2][2]]
-    diagonal2 = [@board[0][2], @board[1][1], @board[2][0]]
-    return player1_name if diagonal1.all? { |spot| spot == symbol}
-    return player2_name if diagonal1.all? { |spot| spot == symbol}
-    return player1_name if diagonal2.all? { |spot| spot == symbol}
-    return player2_name if diagonal2.all? { |spot| spot == symbol}
+      diagonal1 = [@board[0][0], @board[1][1], @board[2][2]]
+      diagonal2 = [@board[0][2], @board[1][1], @board[2][0]]
+      return player1_name if diagonal1.all? { |spot| spot == symbol}
+      return player2_name if diagonal1.all? { |spot| spot == symbol}
+      return player1_name if diagonal2.all? { |spot| spot == symbol}
+      return player2_name if diagonal2.all? { |spot| spot == symbol}
+    end
+    # default return value if no winning condition is found
+      false
   end
-# default return value if no winning condition is found
-  false
+  
 end
 
 #example usage cases:
