@@ -61,7 +61,9 @@ class Game
     symbols = ['X', 'O']
 
     symbols.each do |symbol|
-      # check rows
+    # check rows
+    @board.each do |row|      
+      return true if row.all? { |spot| spot == symbol}
     end
   
   end
