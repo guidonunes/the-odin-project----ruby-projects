@@ -61,7 +61,8 @@ class Game
     player1_name_win = false
     player2_name_win = false
     @board.transpose.each do |row|
-      
+      player1_name_win = row.all? (player1_name)
+
     end
 
   end
