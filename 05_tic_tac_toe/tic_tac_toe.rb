@@ -59,6 +59,10 @@ class Game
 
   def check_winner(player1_name, player2_name)
     symbols = ['X', 'O']
+
+    symbols.each do |symbol|
+      # check rows
+    end
   
   end
 end
