@@ -58,6 +58,8 @@ class Game
   end
 
   def check_winner(player1_name, player2_name)
+    player1_name_win = false
+    player2_name_win = false
     
   end
 end
