@@ -74,8 +74,10 @@ class Game
     # check diagonals
     diagonal1 = [@board[0][0], @board[1][1], @board[2][2]]
     diagonal2 = [@board[0][2], @board[1][1], @board[2][0]]
-    return true if diagonal1.all? { |spot| spot == symbol}
-    return true if diagonal2.all? { |spot| spot == symbol}
+    return player1_name if diagonal1.all? { |spot| spot == symbol}
+    return player2_name if diagonal1.all? { |spot| spot == symbol}
+    return player1_name if diagonal2.all? { |spot| spot == symbol}
+    return player2_name if diagonal2.all? { |spot| spot == symbol}
   end
 # default return value if no winning condition is found
   false
