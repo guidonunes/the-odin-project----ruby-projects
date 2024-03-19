@@ -65,7 +65,10 @@ class Game
     @board.each do |row|      
       return true if row.all? { |spot| spot == symbol}
     end
-  
+    # check columns
+    @board.transpose.each do |col|
+      return true if col.all? {|spot| spot == symbol}
+    end
   end
 end
 
