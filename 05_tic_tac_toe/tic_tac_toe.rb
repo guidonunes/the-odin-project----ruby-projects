@@ -44,6 +44,15 @@ class Game
     end
   end
 
+  def print_result
+    winner = check_winner
+    if winner
+      puts "Congratulations #{winner}! You won!"
+    else
+      puts "It's a draw!"
+    end
+  end
+
   private
 
   def play_to_index(move)
@@ -82,36 +91,16 @@ class Game
     # default return value if no winning condition is found
       false
   end
-
-  def print_result
-    winner = check_winner
-    if winner
-      puts "Congratulations #{winner}! You won!"
-    else
-      puts "It's a draw!"
-    end
-  end
 end
 
 #example usage cases:
 board = Game.new(player1_name, player2_name)
 board.draw_board
-board.make_move
-board.draw_board
-board.make_move
-board.draw_board
-board.make_move
-board.draw_board
-board.make_move
-board.draw_board
-board.make_move
-board.draw_board
-board.make_move
-board.draw_board
+5.times do
+  board.make_move
+  board.draw_board
+end
+board.print_result
 
 
 
-#TODO:
-#add a method to check the winner
-#check for diagonal combos
-#check for the method calls
