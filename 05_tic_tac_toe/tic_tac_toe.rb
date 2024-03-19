@@ -60,7 +60,10 @@ class Game
   def check_winner(player1_name, player2_name)
     player1_name_win = false
     player2_name_win = false
-    
+    @board.transpose.each do |row|
+      
+    end
+
   end
 end
 
