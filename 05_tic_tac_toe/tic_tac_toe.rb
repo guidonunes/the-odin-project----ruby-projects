@@ -68,7 +68,8 @@ class Game
     end
     # check columns
     @board.transpose.each do |col|
-      return true if col.all? {|spot| spot == symbol}
+      return player1_name if col.all? {|spot| spot == symbol}
+      return player2_name if col.all? {|spot| spot == symbol}
     end
     # check diagonals
     diagonal1 = [@board[0][0], @board[1][1], @board[2][2]]
