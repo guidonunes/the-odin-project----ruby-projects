@@ -45,7 +45,7 @@ class Game
   end
 
   def print_result
-    winner = check_winner
+    winner = check_winner(player1_name, player2_name)
     if winner
       puts "Congratulations #{winner}! You won!"
     else
