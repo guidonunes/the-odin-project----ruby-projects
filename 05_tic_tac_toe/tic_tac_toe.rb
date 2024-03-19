@@ -83,11 +83,13 @@ class Game
     # check diagonals
       diagonal1 = [@board[0][0], @board[1][1], @board[2][2]]
       diagonal2 = [@board[0][2], @board[1][1], @board[2][0]]
-      return player1_name if diagonal1.all? { |spot| spot == symbol}
-      return player2_name if diagonal1.all? { |spot| spot == symbol}
-      return player1_name if diagonal2.all? { |spot| spot == symbol}
-      return player2_name if diagonal2.all? { |spot| spot == symbol}
+      return player1_name if diagonal1.all? { |spot| spot == symbol }
+      return player2_name if diagonal1.all? { |spot| spot == symbol }
+      return player1_name if diagonal2.all? { |spot| spot == symbol }
+      return player2_name if diagonal2.all? { |spot| spot == symbol }
     end
+    # check for a draw
+    return nil unless @board.flatten.all? { |spot| spot.is_a?(String) }
     # default return value if no winning condition is found
       false
   end
@@ -96,7 +98,7 @@ end
 #example usage cases:
 board = Game.new(player1_name, player2_name)
 board.draw_board
-5.times do
+6.times do
   board.make_move
   board.draw_board
 end
