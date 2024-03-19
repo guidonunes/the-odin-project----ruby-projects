@@ -65,6 +65,7 @@ class Game
       player2_name_win = row.all? (player2_name)
       break if player1_name_win || player2_name_win
     end
+    puts "Congratulations #{player1_name}! You won!"
   end
 end
 
