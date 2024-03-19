@@ -84,9 +84,13 @@ class Game
   end
 
   def print_result
-    
+    winner = check_winner
+    if winner
+      puts "Congratulations #{winner}! You won!"
+    else
+      puts "It's a draw!"
+    end
   end
-
 end
 
 #example usage cases:
