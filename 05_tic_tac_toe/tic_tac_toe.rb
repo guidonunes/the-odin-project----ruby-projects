@@ -82,7 +82,11 @@ class Game
     # default return value if no winning condition is found
       false
   end
-  
+
+  def print_result
+    
+  end
+
 end
 
 #example usage cases:
