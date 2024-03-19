@@ -30,7 +30,7 @@ class Game
   end
   
   def make_move
-    symbol = current_player == 1 ? 'X' : '0'
+    symbol = current_player == 1 ? 'X' : 'O'
     print "#{current_player == 1 ? player1_name : player2_name}, pick a spot (1-9): "
     move = gets.chomp.to_i
     
@@ -47,7 +47,7 @@ class Game
   private
 
   def play_to_index(move)
-  # move numbers are 1-based, whereas the array index is 0-based  
+  # the move numbers are 1-based, whereas the array index is 0-based  
     row = (move -1) / 3
     col = (move -1) % 3
     [row, col]
@@ -56,6 +56,10 @@ class Game
   def switch_player
     @current_player = @current_player == 1 ? 2 : 1
   end
+
+  def check_winner(player1_name, player2_name)
+    
+  end
 end
 
 #example usage cases:
@@ -63,3 +67,20 @@ board = Game.new(player1_name, player2_name)
 board.draw_board
 board.make_move
 board.draw_board
+board.make_move
+board.draw_board
+board.make_move
+board.draw_board
+board.make_move
+board.draw_board
+board.make_move
+board.draw_board
+board.make_move
+board.draw_board
+
+
+
+#TODO:
+#add a method to check the winner
+#check for diagonal combos
+#check for the method calls
