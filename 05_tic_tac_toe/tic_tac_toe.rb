@@ -15,7 +15,6 @@
 class Game
   attr_accessor :board, :current_player, :player1_name, :player2_name
 
-  
   def initialize(player1_name, player2_name)
     @board = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
     @current_player = 1
@@ -53,11 +52,19 @@ class Game
 
   def print_result
     winner = check_winner(player1_name, player2_name)
-    if winner
-      puts "Congratulations #{winner}! You won!"
+    if winner === player1_name
+      puts "Congratulations #{player1_name}! You won!"
+    elsif winner == player2_name
+      puts "Congratulations #{player2_name}! You won!"
     elsif game_over?
       puts "It's a draw!"
     end
+  end
+
+  def play_again?
+    print "Do you want to play again? (y/n): "
+    choice = gets.chomp.downcase
+    choice == 'y'
   end
 
   private
@@ -101,16 +108,23 @@ class Game
 end
 
 #example usage cases:
-board = Game.new(player1_name, player2_name)
-board.draw_board
 loop do
-  board.make_move
+  board = Game.new(player1_name, player2_name)
   board.draw_board
-  result = board.print_result
-  break if result
+  loop do
+    board.make_move
+    board.draw_board
+    result = board.print_result
+    break if result
+    
+    if board.game_over?  
+      break unless board.play_again?  
+    end
+  end
+  
+  break unless board.play_again?
 end
 
 
-#TO DO:
-# add a play again method
-# fix the player2 winning message to display player2 actual name
+
+
