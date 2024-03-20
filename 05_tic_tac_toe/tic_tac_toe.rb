@@ -52,10 +52,8 @@ class Game
 
   def print_result
     winner = check_winner
-    if winner === player1_name
-      puts "Congratulations #{player1_name}! You won!"
-    elsif winner == player2_name
-      puts "Congratulations #{player2_name}! You won!"
+    if winner 
+      puts "We've got a winner!"
     elsif game_over?
       puts "It's a draw!"
     end
@@ -86,21 +84,23 @@ class Game
     symbols.each do |symbol|
     # check rows
     @board.each do |row|      
-      return player1_name if row.all? { |spot| spot == symbol}
-      return player2_name if row.all? { |spot| spot == symbol}
+      return player2_name if row.all? { |spot| spot == symbol }
+      return player1_name if row.all? { |spot| spot == symbol }
     end
+
     # check columns
     @board.transpose.each do |col|
-      return player1_name if col.all? {|spot| spot == symbol}
       return player2_name if col.all? {|spot| spot == symbol}
+      return player1_name if col.all? {|spot| spot == symbol}
     end
+
     # check diagonals
       diagonal1 = [@board[0][0], @board[1][1], @board[2][2]]
       diagonal2 = [@board[0][2], @board[1][1], @board[2][0]]
-      return player1_name if diagonal1.all? { |spot| spot == symbol }
       return player2_name if diagonal1.all? { |spot| spot == symbol }
-      return player1_name if diagonal2.all? { |spot| spot == symbol }
+      return player1_name if diagonal1.all? { |spot| spot == symbol }
       return player2_name if diagonal2.all? { |spot| spot == symbol }
+      return player1_name if diagonal2.all? { |spot| spot == symbol }
     end
     # default return value if no winning condition is found
       false
@@ -128,3 +128,6 @@ end
 
 
 
+#TODO:
+
+#fix play again method to refresh when press y
