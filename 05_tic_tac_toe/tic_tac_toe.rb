@@ -47,11 +47,11 @@ class Game
 
   def game_over?
     #check for a draw
-    @board.flatten.none? { |spot| spot.is_a?(Integer) } || check_winner(player1_name, player2_name)
+    @board.flatten.none? { |spot| spot.is_a?(Integer) } || check_winner
   end
 
   def print_result
-    winner = check_winner(player1_name, player2_name)
+    winner = check_winner
     if winner === player1_name
       puts "Congratulations #{player1_name}! You won!"
     elsif winner == player2_name
@@ -80,7 +80,7 @@ class Game
     @current_player = @current_player == 1 ? 2 : 1
   end
 
-  def check_winner(player1_name, player2_name)
+  def check_winner
     symbols = ['X', 'O']
 
     symbols.each do |symbol|
@@ -107,7 +107,7 @@ class Game
   end
 end
 
-#example usage cases:
+#game setup:
 loop do
   board = Game.new(player1_name, player2_name)
   board.draw_board
