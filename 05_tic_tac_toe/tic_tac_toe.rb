@@ -1,18 +1,20 @@
-#game intro
-puts "Welcome to Tic Tac Toe! The rules are the same old ones. Have fun!"
+  #game intro
+  puts "Welcome to Tic Tac Toe! The rules are the same old ones. Have fun!"
+  
+  print "Enter Player 1's name: "
+  player1_name = gets.chomp
+  puts "#{player1_name} is X"
+  
+  print "Enter Player 2's name: "
+  player2_name = gets.chomp
+  puts "#{player2_name} is O"
+  
+  puts "Let's start the game! #{player1_name} vs #{player2_name}"
 
-print "Enter Player 1's name: "
-player1_name = gets.chomp
-puts "#{player1_name} is X"
-
-print "Enter Player 2's name: "
-player2_name = gets.chomp
-puts "#{player2_name} is O"
-
-puts "Let's start the game! #{player1_name} vs #{player2_name}"
 
 class Game
   attr_accessor :board, :current_player, :player1_name, :player2_name
+
   
   def initialize(player1_name, player2_name)
     @board = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
@@ -44,11 +46,16 @@ class Game
     end
   end
 
+  def game_over?
+    #check for a draw
+    @board.flatten.none? { |spot| spot.is_a?(Integer) } || check_winner(player1_name, player2_name)
+  end
+
   def print_result
     winner = check_winner(player1_name, player2_name)
     if winner
       puts "Congratulations #{winner}! You won!"
-    else
+    elsif game_over?
       puts "It's a draw!"
     end
   end
@@ -88,8 +95,6 @@ class Game
       return player1_name if diagonal2.all? { |spot| spot == symbol }
       return player2_name if diagonal2.all? { |spot| spot == symbol }
     end
-    # check for a draw
-    return nil unless @board.flatten.all? { |spot| spot.is_a?(String) }
     # default return value if no winning condition is found
       false
   end
@@ -98,11 +103,14 @@ end
 #example usage cases:
 board = Game.new(player1_name, player2_name)
 board.draw_board
-6.times do
+loop do
   board.make_move
   board.draw_board
+  result = board.print_result
+  break if result
 end
-board.print_result
 
 
-
+#TO DO:
+# add a play again method
+# fix the player2 winning message to display player2 actual name
