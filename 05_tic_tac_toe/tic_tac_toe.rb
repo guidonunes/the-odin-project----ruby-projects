@@ -108,24 +108,19 @@ class Game
 end
 
 #game setup:
-loop do
+loop do 
+  #initialize the game
   board = Game.new(player1_name, player2_name)
   board.draw_board
+  #play the game
   loop do
     board.make_move
     board.draw_board
     result = board.print_result
-    break if result
-    
-    if board.game_over?  
-      break unless board.play_again?  
-    end
+    break if result || board.game_over?
   end
-  
   break unless board.play_again?
 end
-
-
 
 
 #TODO:
