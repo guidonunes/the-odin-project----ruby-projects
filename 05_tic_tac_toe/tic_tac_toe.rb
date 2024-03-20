@@ -11,7 +11,6 @@
   
   puts "Let's start the game! #{player1_name} vs #{player2_name}"
 
-
 class Game
   attr_accessor :board, :current_player, :player1_name, :player2_name
 
@@ -121,8 +120,3 @@ loop do
   end
   break unless board.play_again?
 end
-
-
-#TODO:
-
-#fix play again method to refresh when press y
