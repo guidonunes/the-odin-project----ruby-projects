@@ -87,6 +87,11 @@ class Mastermind
   def winning_combo?(feedback)
     feedback.all? {|symbol| symbol == '●'}
   end
+
+  def play_again
+  
+  end
+
   
   # ANSI scape codes to print names of the constants in different colors on the terminal
   def self.print_colors_with_colors
