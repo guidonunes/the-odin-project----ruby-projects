@@ -32,11 +32,18 @@ class Mastermind
 
   def player_guess
     puts "It's your time to guess. Enter a sequence of colors (e.g., 'RGBYP'). Available colors: R, G, B, Y, P."
-    converted_guess(gets.chomp)
+    loop do
+      input = gets.chomp.upcase
+      if valid_input?(input)
+        return converted_guess
+      else
+        puts "Invalid input. Please enter a sequence of valid colors."
+      end  
+    end
   end
 
   def converted_guess(guess)
-    guess.split('')
+    guess.spl
   end 
   # ANSI scape codes to print names of the constants in different colors on the terminal
   def self.print_colors_with_colors
