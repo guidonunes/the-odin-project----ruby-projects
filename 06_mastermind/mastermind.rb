@@ -1,9 +1,12 @@
 class Mastermind
   COLORS = ["R", "G", "B", "Y", "O", "P"].freeze
-
+  
+  attr_accessor :player_guess
+  
   def initialize
     game_instructions
     @secret_code = secret_code
+    @player_guess = player_guess
   end
 
   def game_instructions
