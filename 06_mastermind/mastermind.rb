@@ -31,7 +31,7 @@ class Mastermind
   end
   #handles player input
   def player_guess
-    puts "It's your time to guess. Enter a sequence of colors (e.g., 'RGBYP'). Available colors: R, G, B, Y, P."
+    puts "It's your time to guess. Enter a sequence of colors (e.g., 'RGBYOP'). Available colors: R, G, B, Y, O, P."
     loop do
       input = gets.chomp.upcase
       if valid_input?(input)
