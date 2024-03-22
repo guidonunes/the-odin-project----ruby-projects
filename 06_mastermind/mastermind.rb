@@ -74,12 +74,14 @@ class Mastermind
       feedback = evaluate_guess(@secret_code, current_guess)
       puts "Feedback: #{feedback.join(' ')}"
 
-    if feedback.all? {|symbol| symbol == '●'}
-      puts "Congratulations! You won!"
-      break
-    else
-      puts "Ouch! That was close."
-    end
+      if feedback.all? {|symbol| symbol == '●'}
+        puts "Congratulations! You won!"
+        break
+      else
+        puts "Ouch! That was close."
+      end
+      break if i == 9
+    end     
   end
   
   # ANSI scape codes to print names of the constants in different colors on the terminal
