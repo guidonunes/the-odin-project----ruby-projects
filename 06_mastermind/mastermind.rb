@@ -29,13 +29,13 @@ class Mastermind
   def self.print_colors_with_colors
     COLORS.each_with_index do |color, index|
       color_code = case index
-                   when 0 then "\e[31m" 
-                   when 1 then "\e[32m"
-                   when 2 then "\e[34m"
-                   when 3 then "\e[33m"
-                   when 4 then "\e[33m"
-                   when 5 then "\e[35m" 
-                   else "\e[0m"
+                    when 0 then "\e[31m" 
+                    when 1 then "\e[32m"
+                    when 2 then "\e[34m"
+                    when 3 then "\e[33m"
+                    when 4 then "\e[33m"
+                    when 5 then "\e[35m" 
+                    else "\e[0m"
                    end
     puts "#{color_code}#{color}\e[0m"  
     end
