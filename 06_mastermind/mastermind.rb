@@ -27,24 +27,18 @@ class Mastermind
 
   # ANSI scape codes to print names of the constants in different colors on the terminal
   def self.print_colors_with_colors
-    COLORS.each do |color|
-      case color
-      when "R"
-        puts "\e[31m#{color}\e[0m"
-      when "G"
-        puts "\e[32m#{color}\e[0m"
-      when "B"
-        puts "\e[34m#{color}\e[0m"
-      when "Y"
-        puts "\e[33m#{color}\e[0m"
-      when "O"
-        puts "\e[33m#{color}\e[0m"
-      when "P"
-        puts "\e[35m#{color}\e[0m" 
-      else
-        puts color
-      end
-    end    
+    COLORS.each_with_index do |color, index|
+      color_code = case index
+                   when 0 then "\e[31m" 
+                   when 1 then "\e[32m"
+                   when 2 then "\e[34m"
+                   when 3 then "\e[33m"
+                   when 4 then "\e[33m"
+                   when 5 then "\e[35m" 
+                   else "\e[0m"
+                   end
+    puts "#{color_code}#{color}\e[0m"  
+    end
   end
 end
 
