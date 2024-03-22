@@ -81,7 +81,8 @@ class Mastermind
         puts "Ouch! That was close."
       end
       break if i == 9
-    end     
+    end
+    break unless play_again     
   end
   
   def winning_combo?(feedback)
