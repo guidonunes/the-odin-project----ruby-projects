@@ -3,6 +3,7 @@ class Mastermind
 
   def initialize
     game_instructions
+    @secret_code = secret_code
   end
 
   def game_instructions
@@ -29,6 +30,14 @@ class Mastermind
     COLORS.shuffle.take(4)
   end
 
+  def player_guess
+    puts "It's your time to guess. Enter a sequence of colors (e.g., 'RGBYP'). Available colors: R, G, B, Y, P."
+    converted_guess(gets.chomp)
+  end
+
+  def converted_guess(guess)
+    guess.split('')
+  end 
   # ANSI scape codes to print names of the constants in different colors on the terminal
   def self.print_colors_with_colors
     COLORS.each_with_index do |color, index|
