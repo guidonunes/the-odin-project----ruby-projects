@@ -52,7 +52,13 @@ class Mastermind
     guess.split('')
   end 
 
-  def evaluate_guess(player_guess)
+  def evaluate_guess(secret_code, player_guess)
+    feedback = []
+
+    player_guess.each_with_index do |color, index|
+        if color == secret_code[index]
+            
+            
   
   end
   
