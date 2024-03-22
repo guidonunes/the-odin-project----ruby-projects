@@ -60,8 +60,10 @@ class Mastermind
             feedback << '●'  # correct color in correct position
         elsif secret_code.include?(color)
             feedback << '○'  # correct color but in the wrong position 
-            
-  
+        else
+            feedback << '#' # incorrect color    
+        end
+    end        
   end
   
   # ANSI scape codes to print names of the constants in different colors on the terminal
