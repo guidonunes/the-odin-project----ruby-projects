@@ -74,7 +74,7 @@ class Mastermind
       feedback = evaluate_guess(@secret_code, current_guess)
       puts "Feedback: #{feedback.join(' ')}"
 
-      if feedback.all? {|symbol| symbol == '●'}
+      if winning_combo?(feedback)
         puts "Congratulations! You won!"
         break
       else
@@ -85,7 +85,7 @@ class Mastermind
   end
   
   def winning_combo?(feedback)
-    
+    feedback.all? {|symbol| symbol == '●'}
   end
   
   # ANSI scape codes to print names of the constants in different colors on the terminal
