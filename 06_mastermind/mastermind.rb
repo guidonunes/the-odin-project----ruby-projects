@@ -43,10 +43,10 @@ class Mastermind
   end
 
   def valid_input?(input)
-    input.match?()
+    input.match?(/\A[RGBYP]{4}\z/)
   end
 
-  def converted_guess(guess)
+  def stringfy_guess(guess)
     guess.spl
   end 
   # ANSI scape codes to print names of the constants in different colors on the terminal
