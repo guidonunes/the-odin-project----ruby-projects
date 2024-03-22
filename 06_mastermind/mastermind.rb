@@ -1,7 +1,7 @@
 class Mastermind
   COLORS = ["R", "G", "B", "Y", "O", "P"].freeze
 
-  def intialize
+  def initialize
     game_instructions
   end
 
