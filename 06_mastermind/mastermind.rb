@@ -6,7 +6,6 @@ class Mastermind
   def initialize
     game_instructions
     @secret_code = secret_code
-    @player_guess = player_guess
   end
 
   def game_instructions
