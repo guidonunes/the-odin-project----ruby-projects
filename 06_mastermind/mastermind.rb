@@ -43,4 +43,4 @@ class Mastermind
 end
 
 mastermind = Mastermind.new
-mastermind.game_instructions
+
