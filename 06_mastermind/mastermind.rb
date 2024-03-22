@@ -68,6 +68,13 @@ class Mastermind
   end
 
   def total_attempts
+    loop do
+      make_attempts
+      break unless play_again
+    end
+  end
+
+  def make_attempts
     10.times do |i|
       puts "This guessing number #{i + 1} out of 10"
       current_guess = player_guess
