@@ -84,6 +84,10 @@ class Mastermind
     end     
   end
   
+  def winning_combo?(feedback)
+    
+  end
+  
   # ANSI scape codes to print names of the constants in different colors on the terminal
   def self.print_colors_with_colors
     COLORS.each_with_index do |color, index|
