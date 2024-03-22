@@ -76,6 +76,10 @@ class Mastermind
 
     if feedback.all? {|symbol| symbol == '●'}
       puts "Congratulations! You won!"
+      break
+    else
+      puts "Ouch! That was close."
+    end
   end
   
   # ANSI scape codes to print names of the constants in different colors on the terminal
