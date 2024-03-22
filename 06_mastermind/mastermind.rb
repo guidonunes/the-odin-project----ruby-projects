@@ -63,7 +63,8 @@ class Mastermind
         else
             feedback << '#' # incorrect color    
         end
-    end        
+    end
+    feeedback        
   end
   
   # ANSI scape codes to print names of the constants in different colors on the terminal
