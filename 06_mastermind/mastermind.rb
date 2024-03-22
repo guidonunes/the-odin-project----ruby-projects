@@ -37,7 +37,7 @@ class Mastermind
     loop do
       input = gets.chomp.upcase
       if valid_input?(input)
-        return stringfy_guess
+        return stringfy_guess(input)
       else
         puts "Invalid input. Please enter a sequence of valid colors."
       end  
