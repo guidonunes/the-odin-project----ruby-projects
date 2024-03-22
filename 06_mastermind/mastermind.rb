@@ -57,7 +57,8 @@ class Mastermind
 
     player_guess.each_with_index do |color, index|
         if color == secret_code[index]
-            
+            feedback << '●'  # correct color in correct position
+         
             
   
   end
