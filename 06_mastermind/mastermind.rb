@@ -89,7 +89,9 @@ class Mastermind
   end
 
   def play_again
-  
+    puts "Want to play again? (y/n)"
+    answer = gets.chomp.downcase
+    answer == 'y'
   end
 
   
