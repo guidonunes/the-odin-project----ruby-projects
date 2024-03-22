@@ -52,6 +52,10 @@ class Mastermind
     guess.split('')
   end 
 
+  def total_attempts
+  
+  end
+
   def evaluate_guess(secret_code, player_guess)
     feedback = []
 
@@ -94,6 +98,5 @@ mastermind.player_guess
 #TODO:
 
 #implement 10 turns match rule
-#assign the correct symbols to the guesses
-#implement iteration logic for each play
+
 
