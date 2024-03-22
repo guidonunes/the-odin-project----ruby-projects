@@ -29,13 +29,13 @@ class Mastermind
   def secret_code
     COLORS.shuffle.take(4)
   end
-
+  #handles player input
   def player_guess
     puts "It's your time to guess. Enter a sequence of colors (e.g., 'RGBYP'). Available colors: R, G, B, Y, P."
     loop do
       input = gets.chomp.upcase
       if valid_input?(input)
-        return converted_guess
+        return stringfy_guess
       else
         puts "Invalid input. Please enter a sequence of valid colors."
       end  
@@ -43,11 +43,11 @@ class Mastermind
   end
 
   def valid_input?(input)
-    input.match?(/\A[RGBYP]{4}\z/)
+    input.match?(/\A[RGBYOP]{4}\z/)
   end
 
   def stringfy_guess(guess)
-    guess.spl
+    guess.split('')
   end 
   # ANSI scape codes to print names of the constants in different colors on the terminal
   def self.print_colors_with_colors
@@ -66,5 +66,16 @@ class Mastermind
   end
 end
 
+
+#game setup
 mastermind = Mastermind.new
+mastermind.secret_code
+mastermind.player_guess
+
+
+#TODO:
+
+#implement 10 turns match rule
+#assign the correct symbols to the guesses
+#implement iteration logic for each play
 
