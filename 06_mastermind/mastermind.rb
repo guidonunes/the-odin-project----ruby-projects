@@ -5,7 +5,7 @@ class Mastermind
   
   def initialize
     game_instructions
-    @secret_code = secret_code
+    @secret_code = self.secret_code
   end
 
   def game_instructions
@@ -121,12 +121,15 @@ end
 
 #game setup
 mastermind = Mastermind.new
-mastermind.secret_code
-mastermind.player_guess
+loop do
+  secret_code = mastermind.secret_code
+  mastermind.total_attempts
+
+  break unless mastermind.play_again
+end
 
 
-#TODO:
+#todo:
 
-#implement 10 turns match rule
-
+#review mastermind.txt
 
