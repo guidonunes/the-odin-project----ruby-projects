@@ -52,6 +52,9 @@ class Mastermind
     guess.split('')
   end 
 
+  def evaluate_guess(player_guess)
+  
+  end
   
   # ANSI scape codes to print names of the constants in different colors on the terminal
   def self.print_colors_with_colors
