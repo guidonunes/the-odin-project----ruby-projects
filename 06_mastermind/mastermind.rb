@@ -64,7 +64,7 @@ class Mastermind
         feedback << '#' # incorrect color    
       end
     end
-    feeedback        
+    feedback        
   end
 
   def total_attempts
