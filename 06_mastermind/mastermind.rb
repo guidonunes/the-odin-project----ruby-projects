@@ -83,13 +83,11 @@ class Mastermind
 
       if winning_combo?(feedback)
         puts "Congratulations! You won!"
-        break
+        return
       else
         puts "Ouch! That was close."
       end
-      break if i == 9
     end
-    break unless play_again     
   end
   
   def winning_combo?(feedback)
