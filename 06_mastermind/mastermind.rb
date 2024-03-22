@@ -42,6 +42,10 @@ class Mastermind
     end
   end
 
+  def valid_input?(input)
+    input.match?()
+  end
+
   def converted_guess(guess)
     guess.spl
   end 
