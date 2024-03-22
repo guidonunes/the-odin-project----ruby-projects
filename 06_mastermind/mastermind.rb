@@ -33,7 +33,7 @@ class Mastermind
   end
   #handles player input
   def player_guess
-    puts "It's your time to guess. Enter a sequence of colors (e.g., 'RGBYOP'). Available colors: R, G, B, Y, O, P."
+    puts "It's your time to guess. Enter a sequence of colors (e.g., 'RGBY'). Available colors: R, G, B, Y, O, P."
     loop do
       input = gets.chomp.upcase
       if valid_input?(input)
@@ -51,6 +51,8 @@ class Mastermind
   def stringfy_guess(guess)
     guess.split('')
   end 
+
+  
   # ANSI scape codes to print names of the constants in different colors on the terminal
   def self.print_colors_with_colors
     COLORS.each_with_index do |color, index|
