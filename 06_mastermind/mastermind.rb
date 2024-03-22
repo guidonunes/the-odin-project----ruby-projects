@@ -52,23 +52,30 @@ class Mastermind
     guess.split('')
   end 
 
-  def total_attempts
-  
-  end
-
   def evaluate_guess(secret_code, player_guess)
     feedback = []
 
     player_guess.each_with_index do |color, index|
-        if color == secret_code[index]
-            feedback << '●'  # correct color in correct position
-        elsif secret_code.include?(color)
-            feedback << '○'  # correct color but in the wrong position 
-        else
-            feedback << '#' # incorrect color    
-        end
+      if color == secret_code[index]
+        feedback << '●'  # correct color in correct position
+      elsif secret_code.include?(color)
+        feedback << '○'  # correct color but in the wrong position 
+      else
+        feedback << '#' # incorrect color    
+      end
     end
     feeedback        
+  end
+
+  def total_attempts
+    10.times do |i|
+      puts "This guessing number #{i + 1} out of 10"
+      current_guess = player_guess
+      feedback = evaluate_guess(@secret_code, current_guess)
+      puts "Feedback: #{feedback.join(' ')}"
+
+    if feedback.all? {|symbol| symbol == '●'}
+      puts "Congratulations! You won!"
   end
   
   # ANSI scape codes to print names of the constants in different colors on the terminal
