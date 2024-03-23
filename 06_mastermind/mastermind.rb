@@ -13,9 +13,8 @@ class Mastermind
     puts " "
     puts "In this game, you will try to guess the secret code." 
     puts "The secret code is a combination of colors."
-    puts "The Available colors are:"
+    puts "The Available colors are: R, G, B, Y, O, P."
     puts " "
-    self.class.print_colors_with_colors
     puts " "
     puts "After each guess, you will receive feedback."
     puts " "
@@ -84,8 +83,6 @@ class Mastermind
       if winning_combo?(feedback)
         puts "Congratulations! You won!"
         return
-      else
-        puts "Ouch! That was close."
       end
     end
   end
