@@ -49,7 +49,7 @@ class Mastermind
   end
 
   def stringfy_guess(guess)
-    guess.split('')
+    guess.upcase.split('')
   end 
 
   def evaluate_guess(secret_code, player_guess)
@@ -99,7 +99,7 @@ class Mastermind
     answer = gets.chomp.downcase
     answer == 'y'
   end
-  
+
 end
 
 
