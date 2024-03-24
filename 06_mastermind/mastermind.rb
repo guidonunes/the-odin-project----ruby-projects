@@ -74,7 +74,7 @@ class Mastermind
     end
   end
 
-  def make_attempts()
+  def make_attempts(secret_code)
     10.times do |i|
       puts "This guessing number #{i + 1} out of 10"
       current_guess = player_guess
