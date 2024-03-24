@@ -78,7 +78,7 @@ class Mastermind
     10.times do |i|
       puts "This guessing number #{i + 1} out of 10"
       current_guess = player_guess
-      feedback = evaluate_guess(@secret_code, current_guess)
+      feedback = evaluate_guess(secret_code, current_guess)
       puts "Feedback: #{feedback.join(' ')}"
 
       if winning_combo?(feedback)
