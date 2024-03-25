@@ -6,6 +6,7 @@ class Mastermind
   def initialize
     game_instructions
     @secret_code = self.secret_code
+    @first_play = true # track if it's the first play
   end
 
   def game_instructions
