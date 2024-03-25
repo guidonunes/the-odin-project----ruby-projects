@@ -81,7 +81,7 @@ class Mastermind
   end
 
   def make_attempts(secret_code)
-    puts "This is guessing number #{current_guess + 1} out of 10" if @current_attempt
+    puts "This is guessing number #{@current_attempt + 1} out of 10" if @current_attempt
 
     @current_attempt = 0
     10.times do |i|
