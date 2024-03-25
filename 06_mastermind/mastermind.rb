@@ -36,7 +36,9 @@ class Mastermind
     # show message only on the first play
     if @first_play
       puts "It's your time to guess. Enter a sequence of colors (e.g., 'RGBY'). Available colors: R, G, B, Y, O, P."
-      @first_play = false # set first_play
+      @first_play = false # set first_play to false after first play
+    end
+
       loop do
       input = gets.chomp.upcase
       if valid_input?(input)
@@ -79,6 +81,7 @@ class Mastermind
   end
 
   def make_attempts(secret_code)
+    @current_attempt = 0
     10.times do |i|
       puts "This guessing number #{i + 1} out of 10"
       current_guess = player_guess
