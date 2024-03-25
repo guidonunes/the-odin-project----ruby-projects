@@ -21,7 +21,7 @@ class Mastermind
     puts " "
     puts "  - ●  means correct color in the correct position."
     puts "  - ○  means correct color but in the wrong position."
-    puts "  - #  means incorrect color."
+    puts "  - _  means incorrect color."
     puts " "
     puts "You have 10 attempts to crack the code. Have fun!"
     puts " "
