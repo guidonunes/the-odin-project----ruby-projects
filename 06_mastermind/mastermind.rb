@@ -14,7 +14,7 @@ class Mastermind
     puts " "
     puts "In this game, you will try to guess the secret code." 
     puts "The secret code is a combination of colors."
-    puts "The Available colors are: R, G, B, Y, O, P."
+    puts "The Available colors are: R, G, B, Y, O, P, W. (Red, Green, Blue, Yellow, Orange, Purple, White)"
     puts " "
     puts " "
     puts "After each guess, you will receive feedback."
@@ -35,7 +35,7 @@ class Mastermind
   def player_guess
     # show message only on the first play
     if @first_play
-      puts "It's your time to guess. Enter a sequence of colors (e.g., 'RGBY'). Available colors: R, G, B, Y, O, P."
+      puts "It's your time to guess. Enter a sequence of colors (e.g., 'RGBY'). Available colors: R, G, B, Y, O, P, W. (Red, Green, Blue, Yellow, Orange, Purple, White)"
       @first_play = false # set first_play to false after first play
     end
 
@@ -50,7 +50,7 @@ class Mastermind
   end
 
   def valid_input?(input)
-    input.match?(/\A[RGBYOP]{4}\z/)
+    input.match?(/\A[RGBYOPW]{4}\z/)
   end
 
   def stringfy_guess(guess)
