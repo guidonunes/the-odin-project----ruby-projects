@@ -60,7 +60,7 @@ class Mastermind
       elsif secret_code.include?(color)
         feedback << '○'  # correct color but in the wrong position 
       else
-        feedback << '#' # incorrect color    
+        feedback << '_' # incorrect color    
       end
     end
     feedback        
@@ -113,7 +113,5 @@ end
 
 #todo:
 
-#review mastermind.txt
-#decide upon using colors
-#convert player's input to upcase
+#Remove "it's your time to guess" message after the first play
 
