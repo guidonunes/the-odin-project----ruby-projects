@@ -31,10 +31,13 @@ class Mastermind
   def secret_code
     COLORS.shuffle.take(4)
   end
-  #handles player input
+  
   def player_guess
-    puts "It's your time to guess. Enter a sequence of colors (e.g., 'RGBY'). Available colors: R, G, B, Y, O, P."
-    loop do
+    # show message only on the first play
+    if @first_play
+      puts "It's your time to guess. Enter a sequence of colors (e.g., 'RGBY'). Available colors: R, G, B, Y, O, P."
+      @first_play = false # set first_play
+      loop do
       input = gets.chomp.upcase
       if valid_input?(input)
         return stringfy_guess(input)
