@@ -1,5 +1,5 @@
 class Mastermind
-  COLORS = ["R", "G", "B", "Y", "O", "P"].freeze
+  COLORS = ["R", "G", "B", "Y", "O", "P", "W"].freeze
   
   attr_accessor :player_guess
   
