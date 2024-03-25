@@ -35,7 +35,7 @@ class Mastermind
   def player_guess
     # show message only on the first play
     if @first_play
-      puts "It's your time to guess. Enter a sequence of 4 (four) colors (e.g., 'RGBY'). Available colors: R, G, B, Y, O, P, W. (Red, Green, Blue, Yellow, Orange, Purple, White)"
+      puts "Please, enter a sequence of 4 (four) colors (e.g., 'RGBY'). Available colors: R, G, B, Y, O, P, W. (Red, Green, Blue, Yellow, Orange, Purple, White)"
       @first_play = false # set first_play to false after first play
     end
 
@@ -81,8 +81,6 @@ class Mastermind
   end
 
   def make_attempts(secret_code)
-    puts "This is guessing number #{@current_attempt + 1} out of 10" if @current_attempt
-
     @current_attempt = 0
     10.times do |i|
       current_attempt = i
