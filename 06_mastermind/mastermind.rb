@@ -13,7 +13,7 @@ class Mastermind
     puts "==================== Welcome to Mastermind! ===================="
     puts " "
     puts "In this game, you will try to guess the secret code." 
-    puts "The secret code is a combination of colors."
+    puts "The secret code is a combination of 4 (four) colors."
     puts "The Available colors are: R, G, B, Y, O, P, W. (Red, Green, Blue, Yellow, Orange, Purple, White)"
     puts " "
     puts " "
@@ -35,7 +35,7 @@ class Mastermind
   def player_guess
     # show message only on the first play
     if @first_play
-      puts "It's your time to guess. Enter a sequence of colors (e.g., 'RGBY'). Available colors: R, G, B, Y, O, P, W. (Red, Green, Blue, Yellow, Orange, Purple, White)"
+      puts "It's your time to guess. Enter a sequence of 4 (four) colors (e.g., 'RGBY'). Available colors: R, G, B, Y, O, P, W. (Red, Green, Blue, Yellow, Orange, Purple, White)"
       @first_play = false # set first_play to false after first play
     end
 
