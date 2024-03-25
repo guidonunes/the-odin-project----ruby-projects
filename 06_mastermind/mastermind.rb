@@ -123,7 +123,4 @@ loop do
 end
 
 
-#todo:
-
-#Remove "it's your time to guess" message after the first play
 
