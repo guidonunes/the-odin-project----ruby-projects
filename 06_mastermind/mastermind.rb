@@ -86,7 +86,9 @@ class Mastermind
     @current_attempt = 0
     10.times do |i|
       current_attempt = i
-      puts "This guessing number #{i + 1} out of 10"
+      puts ''
+      puts "<<< This guessing number #{i + 1} out of 10 >>>"
+      puts ''
       current_guess = player_guess
       feedback = evaluate_guess(secret_code, current_guess)
       puts "Feedback: #{feedback.join(' ')}"
