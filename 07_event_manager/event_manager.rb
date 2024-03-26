@@ -1,8 +1,10 @@
 puts 'EventManager initialized'
 
 lines = File.readlines('event_attendees.csv')
+row_index = 0
 lines.each do |line|
-    next if line == " ,RegDate,first_Name,last_Name,Email_Address,HomePhone,Street,City,State,Zipcode\n"
+    row_index = row_index + 1
+    next if row_index == 1
     columns = line.split(",")
     name = columns[2]
     puts name
