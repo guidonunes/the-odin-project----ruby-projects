@@ -2,12 +2,13 @@ require 'csv'
 
 puts 'EventManager initialized'
 
-lines = File.readlines('event_attendees.csv')
-lines.each_with_index do |line, index|
-# skip header row. It assumes that it is the first row in the file.
-    next if index == 0
-    columns = line.split(",")
-    name = columns[2]
+contents = CSV.open(
+    'event_attendees.csv', 
+    headers: true
+    header_converters: :symbol
+    )
+contents.each do |row|
+    name = row[2]
     puts name
 end
 
