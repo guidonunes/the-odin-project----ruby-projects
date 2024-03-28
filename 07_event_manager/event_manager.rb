@@ -27,6 +27,8 @@ contents.each do |row|
       roles: ['legislatorUpperBody', 'legislatorLowerBody']
     )
 
+    legislators = legislators.officials
+
     puts "#{name} #{zipcode}"
 end
 
