@@ -36,7 +36,7 @@ contents.each do |row|
     'You can find your representatives by visiting www.commoncause.org/take-action/find-elected-officials'
   end
   
-  puts "#{name} #{zipcode}"
+  puts "#{name} #{zipcode} #{legislators_string}"
 end
 
 
