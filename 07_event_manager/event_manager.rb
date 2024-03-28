@@ -39,7 +39,7 @@ contents.each do |row|
 
     legislators = legislators_by_zipcode(zipcode)
   
-    puts "#{name} #{zipcode} #{legislators_string}"
+    puts "#{name} #{zipcode} #{legislators}"
 end
 
 
