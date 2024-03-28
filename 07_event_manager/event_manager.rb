@@ -1,13 +1,15 @@
 require 'csv'
 require 'google/apis/civicinfo_v2'
 
-civic_info = Google::Apis::CivicinfoV2::CivicInfoService.new
-civic_info.key = 'AIzaSyClRzDqDh5MsXwnCWi0kOiiBivP6JsSyBw'
 
 def clean_zipcode(zipcode)
   zipcode.to_s.rjust(5, '0')[0..4]
 end 
 
+def legislators_by_zipcode(zipcode)
+  civic_info = Google::Apis::CivicinfoV2::CivicInfoService.new
+  civic_info.key = 'AIzaSyClRzDqDh5MsXwnCWi0kOiiBivP6JsSyBw'
+  
 puts 'EventManager initialized'
 
 contents = CSV.open(
