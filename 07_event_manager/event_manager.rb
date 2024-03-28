@@ -37,9 +37,9 @@ contents.each do |row|
 
     zipcode = clean_zipcode(row[:zipcode])
 
-
+    legislators = legislators_by_zipcode(zipcode)
   
-  puts "#{name} #{zipcode} #{legislators_string}"
+    puts "#{name} #{zipcode} #{legislators_string}"
 end
 
 
