@@ -41,8 +41,7 @@ contents.each do |row|
     legislators = legislators_by_zipcode(zipcode)
   
     form_letter = erb_template.result(binding)
-
-    puts personal_letter
+    puts form_letter
 end
 
 
