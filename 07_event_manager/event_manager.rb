@@ -1,3 +1,4 @@
+template_letter = File.read('form_letter.html')
 require 'csv'
 require 'google/apis/civicinfo_v2'
 
@@ -43,3 +44,4 @@ contents.each do |row|
 end
 
 
+#TO BE CONTINUED: Iteration 4
