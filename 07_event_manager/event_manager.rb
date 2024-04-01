@@ -7,7 +7,7 @@ def clean_zipcode(zipcode)
   zipcode.to_s.rjust(5, '0')[0..4]
 end 
 
-def legislators_by_zipcode(zipcode)
+def legislators_by_zipcode(zip)
   civic_info = Google::Apis::CivicinfoV2::CivicInfoService.new
   civic_info.key = 'AIzaSyClRzDqDh5MsXwnCWi0kOiiBivP6JsSyBw'
 
@@ -52,5 +52,3 @@ contents.each do |row|
     
 end
 
-
-#TO BE CONTINUED: outputting form letters to a file
