@@ -46,9 +46,7 @@ erb_template = ERB.new template_letter
 contents.each do |row|
     id = row[0]
     name = row[:first_name]
-
     zipcode = clean_zipcode(row[:zipcode])
-
     legislators = legislators_by_zipcode(zipcode)
   
     form_letter = erb_template.result(binding)
