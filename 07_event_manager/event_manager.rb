@@ -2,7 +2,6 @@ require 'csv'
 require 'google/apis/civicinfo_v2'
 require 'erb'
 
-
 def clean_zipcode(zipcode)
   zipcode.to_s.rjust(5, '0')[0..4]
 end 
@@ -50,8 +49,7 @@ contents.each do |row|
     legislators = legislators_by_zipcode(zipcode)
   
     form_letter = erb_template.result(binding)
-
-   
     
+    save_thank_you_letter(id, form_letter)  
 end
 
