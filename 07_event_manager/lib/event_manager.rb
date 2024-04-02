@@ -31,6 +31,10 @@ def save_thank_you_letter(id, form_letter)
   end    
 end
 
+def clean_phone_number(phone_number)
+
+end
+
 puts 'EventManager initialized'
 
 contents = CSV.open(
