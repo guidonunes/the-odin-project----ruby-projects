@@ -32,6 +32,7 @@ def save_thank_you_letter(id, form_letter)
 end
 
 def clean_phone_number(phone_number)
+  phone_number.gsub!(/[^]/)
 
 end
 
