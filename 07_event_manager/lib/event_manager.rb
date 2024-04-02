@@ -35,9 +35,9 @@ end
 def clean_phone_number(phone_number)
   cleaned_number = phone_number.gsub(/[^\d]/, '')
   
-  if cleaned_number_number.length == 10
-    cleaned_number_number
-  elsif phone_number.length == 11 and phone_number[0] == '1'
+  if cleaned_number.length == 10
+    cleaned_number
+  elsif phone_number.length == 11 && phone_number[0] == '1'
     cleaned_number[1..-1]
   else
     "Invalid phone number format."
