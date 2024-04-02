@@ -31,6 +31,7 @@ def save_thank_you_letter(id, form_letter)
   end    
 end
 
+#Assignment: Clean phone numbers
 def clean_phone_number(phone_number)
   cleaned_number = phone_number.gsub(/[^\d]/, '')
   
