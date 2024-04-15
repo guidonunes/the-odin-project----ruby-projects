@@ -48,7 +48,8 @@ end
 
 #Assignment: Time targeting
 def extract_registration_hour(reg_date)
-
+  parsed_date = DateTime.strptime(reg_date, '%m/%d/%y %H:%M')
+  parsed_date.hour
 end
 
 puts 'EventManager initialized'
@@ -74,4 +75,4 @@ contents.each do |row|
     save_thank_you_letter(id, form_letter)  
 end
 
-#TODO: Assignment: time targeting
+#TODO: Assignment: time targeting (continue)
