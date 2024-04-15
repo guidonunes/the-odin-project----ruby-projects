@@ -46,6 +46,11 @@ def clean_phone_number(phone_number)
   end
 end
 
+#Assignment: Time targeting
+def extract_registration_hour(reg_date)
+
+end
+
 puts 'EventManager initialized'
 
 contents = CSV.open(
