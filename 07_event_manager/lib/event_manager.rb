@@ -1,3 +1,4 @@
+require 'date'
 require 'csv'
 require 'google/apis/civicinfo_v2'
 require 'erb'
@@ -67,3 +68,4 @@ contents.each do |row|
     save_thank_you_letter(id, form_letter)  
 end
 
+#TODO: Assignment: time targeting
